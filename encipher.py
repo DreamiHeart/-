@@ -48,3 +48,11 @@ def rsa_encrypt(s, pubkey_str):
     pubkey = rsa.PublicKey(modulus, exponent)
     # return base64.b64encode(rsa.encrypt(s.encode(), pubkey)).decode()
     return base64.b64encode(rsa.encrypt(s.encode(), pubkey)).decode().replace('+', '%2B')
+    
+    
+    
+    
+test = rsa_encrypt('201900xxxx',"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCoZG+2JfvUXe2P19IJfjH+iLmpVSBX7ErSKnN2rx40EekJ4HEmQpa+vZ76PkHa+5b8L5eTHmT4gFVSukaqwoDjVAVRTufRBzy0ghfFUMfOZ8WluH42luJlEtbv9/dMqixikUrd3H7llf79QIb3gRhIIZT8TcpN6LUbX8noVcBKuwIDAQAB")
+
+print(test)
+
