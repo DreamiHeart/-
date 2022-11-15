@@ -18,8 +18,8 @@
         "Stat":"OK",
         "Message":"成功获取IP信息",
         "Data":{
-            "ip":"121.2.3.6",
-            "country":"日本",
+            "ip":"10.1.2.6",
+            "country":"本",
             "area":"",
             "region":"爱知县",
             "city":"XX",
@@ -51,10 +51,10 @@
             },
         });
     }
-    function initcookieipinfostart(){
+    function initcookieipinfostart() {
         if (!$.cookie('ipinfo') || $.cookie('ip') !== JSON.parse($.cookie('ipinfo').replace('%2*2%', ','))['ip']) {
             initcookieipinfo();
         }
     }
-    window.addEventListener('load',initcookieipinfostart,false);
+    window.addEventListener('load',initcookieipinfostart,true);
 </script >
